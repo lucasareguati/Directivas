@@ -1,0 +1,49 @@
+<!--<div class="row">
+
+    <div class="col" *ngFor="let frase of frases">
+        <hr>
+        <div *ngIf= "mostrar"  class="card text-white bg-primary mb-3" style="width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title"> {{ frase.autor }} </h5>
+                <p class="card-text">{{ frase.mensaje }}</p>
+            </div>
+        
+        </div>
+        <button (click)=" mostrar = ! mostrar " class="btn btn-outline-primary btn-block">
+            Mostrar/Ocultar
+        </button>
+        
+    </div>
+
+
+
+
+    <div class="col">
+        <hr>
+        <ul class="list-group">
+            <li *ngFor="let personaje of personajes; let i = index" class="list-group-item">
+                {{ i + 1 }} - {{ personaje }}
+            </li>
+        </ul>
+    </div>
+</div>  -->
+
+
+<div class="row">
+        <div class="col s12 m7">
+          <div *ngFor="let heroe of heroes" class="card">
+            <div *ngIf="heroe.casa == 'Marvel'"> 
+            <div class="card-image">
+              <img src="{{heroe.img}}">
+              <span class="card-title" >{{heroe.nombre}}</span>
+            </div>
+            <div class="card-content">
+              <p>{{heroe.bio}}</p>
+            </div>
+            <div class="card-action">
+              <a href="#">{{heroe.casa}}</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
